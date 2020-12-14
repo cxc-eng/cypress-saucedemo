@@ -22,7 +22,7 @@ context('Feature: Logging', () => {
 
     it('doesn\'t log in with invalid credentials', () => {
 
-        const invalidCredentialsAndErrorMessages = [
+        const invalidCredentials = [
             {login: 'locked_out_user', password: 'secret_sauce'},
             {login: '{leftarrow}', password: 'secret_sauce'},
             {login: 'performance_glitch_user', password: '{leftarrow}'},
@@ -36,7 +36,7 @@ context('Feature: Logging', () => {
             'Epic sadface: Username and password do not match any user in this service',
         ]
   
-        invalidCredentialsAndErrorMessages.forEach((user, index) => {
+        invalidCredentials.forEach((user, index) => {
             cy.login(user);
   
             cy.get('h3 button.error-button').should('be.visible');
