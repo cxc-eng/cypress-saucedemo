@@ -1,0 +1,14 @@
+{
+  "name": "cypress-saucedemo",
+  "version": "1.0.0",
+  "description": "cypress demo for saucedemo.com",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "author": "khajdyla@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.1.0"
+  }
+}
